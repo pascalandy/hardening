@@ -21,7 +21,7 @@ for s in ./scripts/[0-9_]*; do
 done
 
 f_pre
-f_firewall
+#f_firewall
 f_disablenet
 f_disablemnt
 f_disablemod
