@@ -8,7 +8,7 @@ function f_sshdconfig {
   sed -i '/HostKey.*ssh_host_dsa_key.*/d' "$SSHDFILE"
   sed -i 's/.*X11Forwarding.*/X11Forwarding yes/' "$SSHDFILE"
   sed -i 's/.*LoginGraceTime.*/LoginGraceTime 20/' "$SSHDFILE"
-  #sed -i 's/.*PermitRootLogin.*/PermitRootLogin no/' "$SSHDFILE"
+  sed -i 's/.*PermitRootLogin.*/PermitRootLogin no/' "$SSHDFILE"
   sed -i 's/.*KeyRegenerationInterval.*/KeyRegenerationInterval 1800/' "$SSHDFILE"
   sed -i 's/.*UsePrivilegeSeparation.*/UsePrivilegeSeparation sandbox/' "$SSHDFILE"
   sed -i 's/.*LogLevel.*/LogLevel VERBOSE/' "$SSHDFILE"
